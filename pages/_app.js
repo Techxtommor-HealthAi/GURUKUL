@@ -9,6 +9,7 @@ export default function App({ Component, pageProps }) {
 
   const [progress, setProgress] = useState(0)
   const router = useRouter();
+  const noNavbarPaths = ['/login', '/register', '/biology' ];
 
   const [user, setUser] = useState({token:null})
 
@@ -35,7 +36,8 @@ export default function App({ Component, pageProps }) {
         progress={progress}
         onLoaderFinished={() => setProgress(0)}
       />
-      <Navbar user={user}/>
+      {!noNavbarPaths.includes(router.pathname) && <Navbar />}
+      
       <Component {...pageProps}  user={user}/>
       <Footer></Footer>
     </div>

@@ -12,12 +12,12 @@ const Footer = () => {
                         <span className="ml-3 text-xl">Gurukul</span>
                     </Link>
                     <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© {new Date().getFullYear()} Gurukul —
-                        <a href="https://twitter.com/" className="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">@smackathon</a>
+                        <a href="https://twitter.com/" className="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">@RoboAI</a>
                     </p>
                 </div>
                 <div>
                     <p className={"text-center mb-5"}>
-                        Made with ❤️ by <span className="font-semibold">Anshul, Yash, Nikhil, Priya </span>
+                        Made with ❤️ by <span className="font-semibold">Yash, Nikhil, Vinay </span>
                     </p>
                 </div>
             </footer>
