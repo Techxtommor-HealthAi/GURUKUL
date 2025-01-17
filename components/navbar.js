@@ -34,7 +34,9 @@ const Navbar = ({user}) => {
                         <Link href={"/prequiz"} className="mr-5 hover:text-gray-900">PreQuiz</Link>
                         <Link href={"/dashboard"} className="mr-5 hover:text-gray-900">Dashboard</Link>
                         <Link href={"/myprofile"} className="mr-5 hover:text-gray-900">My Profile</Link>
-                        <Link href={"/discussion"} className="mr-5 hover:text-gray-900">Discussion Forum</Link>
+                        <Link href={"/biology"} className="mr-5 hover:text-gray-900">BodyComposition</Link>
+                        <Link href={"/"} className="mr-5 hover:text-gray-900">Algorithmn</Link>
+                       
                         {/* <Link href={"http://localhost:8080/videoSession"} className="mr-5 hover:text-gray-900">Get Session</Link> */}
                     </nav>
                     < button onClick={logout} className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Logout
