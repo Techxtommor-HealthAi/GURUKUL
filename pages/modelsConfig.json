@@ -1,0 +1,38 @@
+{
+    "human": {
+      "path": "/models/human/scene.gltf",
+      "scale": [0.02, 0.02, 0.02],
+      "position": [0, -2, 0]
+    },
+    "heart": {
+      "path": "/models/heart/scene.gltf",
+      "scale": [3.5, 3.5, 3.5],
+      "position": [0, 0, 0]
+    },
+    "brain": {
+      "path": "/models/human_skull/skull.gltf",
+      "scale": [0.15, 0.15, 0.15],
+      "position": [0, -2, 0]
+    },
+    "frontBody": {
+      "path": "/models/front_body_anatomy/front_body.gltf",
+      "scale": [2.1, 2.1, 2.1],
+      "position": [0, -2, 0]
+    },
+    "liver": {
+      "path": "/models/human_liver/scene.gltf",
+      "scale": [15, 15, 15],
+      "position": [0, 0, 0]
+    },
+    "intestine": {
+      "path": "/models/small_and_large_intestine/scene.gltf",
+      "scale": [2, 2, 2],
+      "position": [0, 0, 0]
+    },
+    "reproductiveSystem": {
+      "path": "/models/male_reproductive_system/scene.gltf",
+      "scale": [1, 1, 1],
+      "position": [0, 0, 0]
+    }
+  }
+  

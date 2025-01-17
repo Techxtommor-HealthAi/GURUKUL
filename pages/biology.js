@@ -1,25 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, useGLTF } from "@react-three/drei";
+import { OrbitControls, useGLTF, Html } from "@react-three/drei";
+import modelsConfig from './modelsConfig.json';
 
-function HumanModel() {
-  const { scene } = useGLTF("/models/scene.gltf"); // Replace with your model path
-  return <primitive object={scene} scale={2} />;
-}
-
-function HeartModel() {
-  const { scene } = useGLTF('/models/heart/scene.gltf'); // Load the GLTF file
-  return <primitive object={scene} scale={2} />;
-}
-
-function BrainModel() {
-  const { scene } = useGLTF('/models/human_skull/skull.gltf'); // Load the GLTF file
-  return <primitive object={scene} scale={2} />;
-}
-
-function FrontBodyModel() {
-  const { scene } = useGLTF('/models/front_body_anatomy/front_body.gltf'); // Load the GLTF file
-  return <primitive object={scene} scale={2} />;
+function ModelViewer({ modelKey }) {
+  const { path, scale, position } = modelsConfig[modelKey];
+  const { scene } = useGLTF(path, true);
+  return <primitive object={scene} scale={scale} position={position} />;
 }
 
 const contentData = {
@@ -129,64 +116,55 @@ export default function BiologyPage() {
   return (
     <div className="flex flex-col h-screen">
       {/* Top Navbar */}
-      <div className="bg-gray-700 text-white p-4 flex justify-between items-center shadow-md">
-        <h1 className="text-xl font-bold">Body Model Viewer</h1>
+      <div className="bg-gray-800 text-white p-4 flex justify-between items-center">
+        <h1 className="text-xl">Body Viewer</h1>
         <button className="bg-gray-600 px-4 py-2 rounded hover:bg-gray-500">Settings</button>
       </div>
 
       {/* Main Content */}
       <div className="flex-1 flex">
         {/* Sidebar */}
-        <div className="w-24 bg-gray-700 text-white flex flex-col items-center py-6 space-y-6">
-          <button 
-            className="w-16 h-16 bg-gray-600 rounded-full hover:bg-gray-500 flex items-center justify-center text-xl"
-            onClick={() => setModel("human")}
-          >
+        <div className="w-20 bg-gray-700 text-white flex flex-col items-center py-6">
+          <button className="w-16 h-16 bg-gray-600 rounded-full mb-4 hover:bg-gray-500 text-2xl" onClick={() => setModel("human")}>
             🦴
           </button>
-          <button 
-            className="w-16 h-16 bg-gray-600 rounded-full hover:bg-gray-500 flex items-center justify-center text-xl"
-            onClick={() => setModel("frontBody")}
-          >
+          <button className="w-16 h-16 bg-gray-600 rounded-full mb-4 hover:bg-gray-500 text-2xl" onClick={() => setModel("frontBody")}>
             💪
           </button>
-          <button 
-            className="w-16 h-16 bg-gray-600 rounded-full hover:bg-gray-500 flex items-center justify-center text-xl"
-            onClick={() => setModel("heart")}
-          >
+          <button className="w-16 h-16 bg-gray-600 rounded-full mb-4 hover:bg-gray-500 text-2xl" onClick={() => setModel("heart")}>
             🫀
           </button>
-          <button 
-            className="w-16 h-16 bg-gray-600 rounded-full hover:bg-gray-500 flex items-center justify-center text-xl"
-            onClick={() => setModel("brain")}
-          >
+          <button className="w-16 h-16 bg-gray-600 rounded-full mb-4 hover:bg-gray-500 text-2xl" onClick={() => setModel("brain")}>
             🧠
           </button>
-          <button className="w-16 h-16 bg-gray-600 rounded-full mb-4 hover:bg-gray-500 text-2xl">
-            🍔
+          <button className="w-16 h-16 bg-gray-600 rounded-full mb-4 hover:bg-gray-500 text-2xl" onClick={() => setModel("liver")}>
+            🏵️
+          </button>
+          <button className="w-16 h-16 bg-gray-600 rounded-full mb-4 hover:bg-gray-500 text-2xl" onClick={() => setModel("intestine")}>
+            🏮
+          </button>
+          <button className="w-16 h-16 bg-gray-600 rounded-full mb-4 hover:bg-gray-500 text-2xl" onClick={() => setModel("reproductiveSystem")}>
+            🔍
           </button>
         </div>
 
         {/* 3D Viewer Canvas */}
         <div className="flex-1 bg-gray-800 flex justify-center items-center h-full">
-          <div className="w-full h-full">
-            <Canvas>
-              <ambientLight intensity={0.5} />
-              <directionalLight position={[10, 10, 20]} />
-              {model === "human" && <HumanModel />}
-              {model === "heart" && <HeartModel />}
-              {model === "brain" && <BrainModel />}
-              {model === "frontBody" && <FrontBodyModel />}
-              <OrbitControls />
-            </Canvas>
-          </div>
+          <Canvas>
+            <ambientLight intensity={0.5} />
+            <directionalLight position={[10, 10, 20]} />
+            <Suspense fallback={<Html><div className="text-white">Loading...</div></Html>}>
+              <ModelViewer modelKey={model} />
+            </Suspense>
+            <OrbitControls />
+          </Canvas>
         </div>
 
         {/* Right Panel */}
-        <div className="w-100 bg-gray-700 text-white p-6 overflow-y-auto">
-          <h2 className="text-lg font-bold mb-4">Details</h2>
-          <div className="prose prose-invert text-sm">
-            {contentData[model]}
+        <div className="w-72 bg-gray-700 text-white p-4">
+          <h2 className="text-lg mb-4">Tools</h2>
+          <div className="space-y-4">
+            {/* Tools Content */}
           </div>
         </div>
       </div>
