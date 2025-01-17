@@ -34,8 +34,8 @@ const Navbar = ({user}) => {
                         <Link href={"/prequiz"} className="mr-5 hover:text-gray-900">PreQuiz</Link>
                         <Link href={"/dashboard"} className="mr-5 hover:text-gray-900">Dashboard</Link>
                         <Link href={"/myprofile"} className="mr-5 hover:text-gray-900">My Profile</Link>
-                        <Link href={"/biology"} className="mr-5 hover:text-gray-900">BodyComposition</Link>
-                        <Link href={"/"} className="mr-5 hover:text-gray-900">Algorithmn</Link>
+                        <Link href={"/biology"} className="mr-5 hover:text-gray-900">BiologyLab</Link>
+                        <Link href={"/"} className="mr-5 hover:text-gray-900">AlgorithmnLab</Link>
                        
                         {/* <Link href={"http://localhost:8080/videoSession"} className="mr-5 hover:text-gray-900">Get Session</Link> */}
                     </nav>
