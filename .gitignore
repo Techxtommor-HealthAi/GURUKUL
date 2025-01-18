@@ -36,6 +36,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 Screenshot
-README.md
 pages/AssesmentForm.js
 pages/dicussion.js
