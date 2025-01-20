@@ -35,7 +35,7 @@ const Navbar = ({user}) => {
                         <Link href={"/dashboard"} className="mr-5 hover:text-gray-900">Dashboard</Link>
                         <Link href={"/myprofile"} className="mr-5 hover:text-gray-900">My Profile</Link>
                         <Link href={"/biology"} className="mr-5 hover:text-gray-900">BiologyLab</Link>
-                        <Link href={"/"} className="mr-5 hover:text-gray-900">AlgorithmnLab</Link>
+                        <Link href={"https://techxtommor-healthai.github.io/AlgorithmVisualizer/"} className="mr-5 hover:text-gray-900">AlgorithmnLab</Link>
                        
                         {/* <Link href={"http://localhost:8080/videoSession"} className="mr-5 hover:text-gray-900">Get Session</Link> */}
                     </nav>

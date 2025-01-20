@@ -1,6 +1,3 @@
-
-
-
 const contentData = {
     human: (
       <>
@@ -98,6 +95,56 @@ const contentData = {
           <li>Physiotherapy</li>
           <li>Fitness and strength training</li>
         </ul>
+      </>
+    ),
+    liver: (
+      <>
+        <h3 className="text-xl font-bold mb-2">Liver: Anatomy and Functions</h3>
+        <h4 className="text-lg font-semibold mt-4">Functions</h4>
+        <ul className="list-disc list-inside space-y-1">
+          <li><b>Detoxification</b>: Filters toxins from the blood.</li>
+          <li><b>Protein Synthesis</b>: Produces essential proteins for blood clotting and other functions.</li>
+          <li><b>Bile Production</b>: Produces bile to aid in digestion of fats.</li>
+          <li><b>Storage</b>: Stores vitamins and minerals, such as iron and vitamin A.</li>
+        </ul>
+        <h4 className="text-lg font-semibold mt-4">Interesting Fact</h4>
+        <p>The liver is the largest internal organ and can regenerate itself if a part is damaged or removed.</p>
+      </>
+    ),
+    intestine: (
+      <>
+        <h3 className="text-xl font-bold mb-2">Intestine: Structure and Function</h3>
+        <h4 className="text-lg font-semibold mt-4">Sections</h4>
+        <ul className="list-disc list-inside space-y-1">
+          <li><b>Small Intestine</b>: Comprises the duodenum, jejunum, and ileum; responsible for nutrient absorption.</li>
+          <li><b>Large Intestine</b>: Includes the cecum, colon, and rectum; absorbs water and forms feces.</li>
+        </ul>
+        <h4 className="text-lg font-semibold mt-4">Functions</h4>
+        <ul className="list-disc list-inside space-y-1">
+          <li>Digestion and absorption of nutrients.</li>
+          <li>Water absorption and waste formation.</li>
+        </ul>
+        <h4 className="text-lg font-semibold mt-4">Did You Know?</h4>
+        <p>The small intestine is about 20 feet long, while the large intestine is about 5 feet long.</p>
+      </>
+    ),
+    reproductiveSystem: (
+      <>
+        <h3 className="text-xl font-bold mb-2">Reproductive System: Overview</h3>
+        <h4 className="text-lg font-semibold mt-4">Male Reproductive System</h4>
+        <ul className="list-disc list-inside space-y-1">
+          <li><b>Testes</b>: Produce sperm and testosterone.</li>
+          <li><b>Penis</b>: Delivers sperm to the female reproductive system.</li>
+          <li><b>Prostate</b>: Produces seminal fluid.</li>
+        </ul>
+        <h4 className="text-lg font-semibold mt-4">Female Reproductive System</h4>
+        <ul className="list-disc list-inside space-y-1">
+          <li><b>Ovaries</b>: Produce eggs and hormones (estrogen and progesterone).</li>
+          <li><b>Uterus</b>: Houses and nourishes the developing fetus.</li>
+          <li><b>Vagina</b>: Birth canal and receptacle for sperm.</li>
+        </ul>
+        <h4 className="text-lg font-semibold mt-4">Interesting Fact</h4>
+        <p>Females are born with all the eggs they will ever have, approximately 1-2 million.</p>
       </>
     ),
   };
